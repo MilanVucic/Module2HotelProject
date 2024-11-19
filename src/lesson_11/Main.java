@@ -2,6 +2,10 @@ package lesson_11;
 
 public class Main {
     public static void main(String[] args) {
+        threadsExample();
+    }
+
+    private static void timerExample() {
         CountdownTimer timer = new CountdownTimer(10, new OnCountDown() {
             @Override
             public void onTick(int seconds) {
@@ -27,7 +31,6 @@ public class Main {
         });
         timer.start();
         timer2.start();
-
     }
 
     private static void threadsExample() {
