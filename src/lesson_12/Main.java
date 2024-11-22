@@ -4,7 +4,8 @@ public class Main {
     volatile int a;
 
     public static void main(String[] args) {
-
+        deadlockExample();
+        System.out.println("Done!");
     }
 
     private static void deadlockExample() {
@@ -20,6 +21,7 @@ public class Main {
                     System.out.println("T1 locked lock2");
                 }
             }
+            System.out.println("T1 finished");
         });
         Thread t2 = new Thread(() -> {
             System.out.println("Started t2");
@@ -30,6 +32,7 @@ public class Main {
                     System.out.println("T2 locked lock1");
                 }
             }
+            System.out.println("T2 finished");
         });
         t1.start();
         t2.start();
