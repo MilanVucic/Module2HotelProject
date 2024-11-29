@@ -1,0 +1,14 @@
+{
+  "age": 20,
+  "name": "Marco",
+  "height": 199.4,
+  "address": {
+    "city": "Belgrade",
+    "zipCode": "11000"
+  },
+  "phoneNumbers": [
+    "123456",
+    "123123123",
+    "1293123"
+  ]
+}
